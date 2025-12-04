@@ -2,6 +2,11 @@
 :root{
     /* Dimensions */ 
     --width_full: 100%;
+    --width-12col: 1200px;
+
+    /* Grid settings */ 
+    --grid_gap: 10px;
+    --padding_default: 20px;
 
     /*Color*/
     --background_color_navigation: #8FBFA099;
@@ -17,6 +22,11 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 body, html{
     width: var(--width_full);
     font-family: ;
@@ -25,15 +35,19 @@ body, html{
     margin: 0;
 }
 
+.container{
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--grid_gap);
+    width: var(--width_full);
+    flex: 1;
+    row-gap: 0;
+}
+
 .navigation, .hero, .image-section, .footer{
     width: var(--width_full)
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    width: var(--width_full);
-}
 
 /*navigation*/
 .navigation{
@@ -41,7 +55,10 @@ body, html{
     padding:10px 0 10px 0;
     position: absolute;
     z-index:10;
-    width: var(--width_full);;
+    width: var(--width_full);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation.fixed {
@@ -49,21 +66,28 @@ body, html{
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.navigation_width_setting {
+    width: var(--width-12col);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu_logo {
-    margin-left: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .menu_logo img{
-    max-width: 260px;
+    max-width: 250px;
 }
 
 .menu-container{
-    margin-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .menu-container ul{
@@ -74,22 +98,29 @@ body, html{
 .menu-container a{
     padding: 0 10px;
     text-decoration: none;
-    color: var(--menu_color_navigation);
+    color: var(--background_color_light);
     text-transform: uppercase;
+    
 }
+.menu-container ul li {
+    border-right: 1px solid var(--background_color_light);
+}
+.menu-container ul :last-child{
+   border-right: none;
 
-.menu-container{
-    display: flex;
-    align-items: center;
 }
+.menu-container a:hover{
+    color: var(--primary_color);
+} 
 
 .clicked {
-    color: var(--clicked_color_navigation)
+    color: var(--primary_color) !important
 }
 
 /*header area*/
 .hero {
     position: relative;
+    overflow: hidden;
 }
 
 .hero img {
