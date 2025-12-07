@@ -105,23 +105,13 @@ body, html{
 .menu-container a{
     padding: 0 10px;
     text-decoration: none;
-    color: var(--background_color_light);
+    color: var(--menu_color_navigation);
     text-transform: uppercase;
     
 }
-.menu-container ul li {
-    border-right: 1px solid var(--background_color_light);
-}
-.menu-container ul :last-child{
-   border-right: none;
-
-}
-.menu-container a:hover{
-    color: var(--primary_color);
-} 
 
 .clicked {
-    color: var(--primary_color) !important
+    color: var(--clicked_color_navigation) !important
 }
 
 /*header area*/
@@ -332,12 +322,12 @@ body, html{
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid_gap); 
     width: var(--width-12col);
-    margin: 0 auto;    
-    align-items: center;
-    position: absolute;
-    top: 59%;
-    left: 0;
     height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    align-items: center;
 }
 
 .musikhuset {
@@ -358,4 +348,51 @@ body, html{
     height: 126px;
     background: var(--white_color);
     grid-column: 7/7;
+}
+
+.footer_info_socials {
+    grid-column: 8/10;    
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_info_socials_facebook a, .footer_info_socials_instagram a, .footer_info_socials_website a{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer_info_socials_facebook p, .footer_info_socials_instagram p, .footer_info_socials_website p {
+    padding-left: 10px;
+    font-family: 'Afacad';
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--clicked_color_navigation)
+}
+
+.footer_info_socials_facebook svg, .footer_info_socials_instagram svg, .footer_info_socials_website svg {
+    color: var(--clicked_color_navigation);
+    max-height: 30px;
+} 
+
+.footer_info_button {
+    grid-column: 10/13;
+}
+
+.footer_info_button button {
+    background-color: var(--clicked_color_navigation);
+    border-radius: 10px;
+    height: 45px;
+    width: 250px;
+    border: none;
+}
+
+.footer_info_button button a {
+    font-family: 'Afacad';
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:var(--ticket_button_color) ;
+    text-decoration: none;
 }
