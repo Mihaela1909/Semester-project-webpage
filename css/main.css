@@ -262,7 +262,7 @@ body, html{
 .ticket_details_button {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 1%;
 }
 
 .ticket_details_button button {
