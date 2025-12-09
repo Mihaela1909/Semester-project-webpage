@@ -427,3 +427,41 @@ body, html{
     color:var(--ticket_button_color) ;
     text-decoration: none;
 }
+
+
+/* contact page */
+
+
+.contact_about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    max-width: 1200px;     
+    margin: 0 auto;        
+    padding: 130px 20px 0; 
+    gap: 20px;
+
+}
+
+.about_text {
+    grid-column: 5 / span 4;
+    
+}
+
+.about_text h2 {
+   font-family: 'Eagle Lake';
+    font-size: 65px;
+    font-weight: 400;
+    color: var(--headline_hero_color);
+    margin: 0;
+   
+}
+
+.text_about_block {
+   grid-column: 3 / span 8;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+        font-family: 'Afacad';
+
+}
