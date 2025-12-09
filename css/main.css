@@ -275,6 +275,10 @@ body, html{
     padding-top: 1%;
 }
 
+.ticket_details_button button:hover, .footer_info_button button:hover {
+    background-color: var(--headline_hero_color);
+}
+
 .ticket_details_button button {
     background-color: var(--ticket_font_color);
     border-radius: 10px;
